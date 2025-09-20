@@ -1,0 +1,16 @@
+# YouTube Transcript → Summary → Podcast
+
+This project provides a **Colab Notebook** that:
+- Fetches transcripts from a YouTube video (using `youtube-transcript-api` if captions exist).
+- Falls back to **Whisper (faster-whisper)** to generate transcripts if captions are unavailable.
+- Summarizes the transcript using a Hugging Face summarization model (DistilBART).
+- Converts the summarized text into podcast-style audio using Edge-TTS.
+
+---
+
+## Features
+- Works directly with a YouTube link  
+- Automatically falls back to STT if captions are missing  
+- Chunking for long transcripts to avoid model limits  
+- Summarization powered by Hugging Face Transformers  
+- Generates MP3 podcast audio with natural neural voices  
